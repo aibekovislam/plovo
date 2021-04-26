@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from dish.views import PlovoAPIView
+from dish.views import DishListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('plovos/', PlovoAPIView.as_view(), name="plovos")
+    path('dish/', include('dish.urls')),
 ]
