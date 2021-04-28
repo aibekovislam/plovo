@@ -9,4 +9,14 @@ class DishListSerializers(serializers.ModelSerializer):
 class DishCreatetSerializers(serializers.ModelSerializer):
     class Meta:
         model = Dish
-        fields = ('name', 'price')    
+        fields = ('name', 'price') 
+
+class DishUpdateSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Dish
+        fields = ('name', 'price')   
+
+class DishSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Dish
+        fields = ('id', 'name', 'price')
