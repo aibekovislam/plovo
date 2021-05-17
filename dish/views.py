@@ -31,7 +31,7 @@ class DishUpdateAPIView(APIView):
 		pk = kwargs['pk']
 		dish = Dish.objects.get(pk=pk)
 		data =request.POST
-		serializer = DishUpdateSerializersz(data=data)
+		serializer = DishUpdateSerializers(data=data)
 
 		if serializer.is_valid():
 			dish.name = serializer.validated_data('name')
