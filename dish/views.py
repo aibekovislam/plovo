@@ -60,3 +60,4 @@ class DishDeleteAPIView(APIView):
 		return Response(data={'message': 'Блюдо удалено'})
 
 
+
